@@ -14,15 +14,11 @@ This repository shares a ready-to-use MCP setup for VS Code.
 3. Install GitHub Copilot extension in VS Code
 4. Clone this repository
 5. Open the repository folder in VS Code
-6. Click on **Start** button in the Copilot Chat panel
-7. When prompted, enter the required information:
-
-### Setup Prompts
-
-When you click **Start**, VS Code will prompt you for the following:
+6. Open `.vscode/mcp.json` in VS Code
+7. Click the **Start** button shown in the `mcp.json` file
+8. When the prompt appears at the top of VS Code, enter the required information:
 
 ![VS Code MCP Setup Prompts](./docs/images/vscode-mcp-setup.png)
-*MCP configuration prompts in VS Code*
 
 #### Azure DevOps Organization URL
 ```
@@ -63,4 +59,3 @@ VS Code will detect `.vscode/mcp.json` automatically and start the Azure DevOps 
 - Verify the Organization URL format: `https://dev.azure.com/<organization-name>`
 - Ensure your PAT token has **Full access** scope
 - Confirm the token hasn't expired by checking https://dev.azure.com/hexagon-si-gpc/_usersSettings/tokens
-- If prompts appear empty, close the terminal and click **Start** again
