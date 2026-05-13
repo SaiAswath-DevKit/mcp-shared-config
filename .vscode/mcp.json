@@ -13,16 +13,6 @@
         "AZURE_DEVOPS_DEFAULT_PROJECT": "${input:defaultProject}"
       },
       "type": "stdio"
-    },
-    "playwright": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@playwright/mcp@latest",
-        "--browser",
-        "msedge"
-      ],
-      "type": "stdio"
     }
   },
   "inputs": [
