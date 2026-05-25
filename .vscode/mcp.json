@@ -1,35 +1,30 @@
 {
-  "servers": {
-    "azureDevOps": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@tiberriver256/mcp-server-azure-devops"
-      ],
-      "env": {
-        "AZURE_DEVOPS_ORG_URL": "${input:orgUrl}",
-        "AZURE_DEVOPS_AUTH_METHOD": "pat",
-        "AZURE_DEVOPS_PAT": "${input:pat}",
-        "AZURE_DEVOPS_DEFAULT_PROJECT": "${input:defaultProject}"
-      },
-      "type": "stdio"
-    }
-  },
-  "inputs": [
-    {
-      "id": "orgUrl",
-      "type": "promptString",
-      "description": "Azure DevOps Organization URL"
-    },
-    {
-      "id": "pat",
-      "type": "promptString",
-      "description": "Azure DevOps PAT"
-    },
-    {
-      "id": "defaultProject",
-      "type": "promptString",
-      "description": "Default Project Name (optional)"
-    }
-  ]
+	"servers": {
+		"azureDevOps": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@tiberriver256/mcp-server-azure-devops"
+			],
+			"env": {
+				"AZURE_DEVOPS_ORG_URL": "${env:AZURE_DEVOPS_ORG_URL}",
+				"AZURE_DEVOPS_AUTH_METHOD": "pat",
+				"AZURE_DEVOPS_PAT": "${env:AZURE_DEVOPS_PAT}",
+				"AZURE_DEVOPS_DEFAULT_PROJECT": "${env:AZURE_DEVOPS_DEFAULT_PROJECT}"
+			},
+			"type": "stdio"
+		},
+		"playwright": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@playwright/mcp@latest",
+				"--browser",
+				"msedge",
+				"--user-data-dir",
+				"C:\\Users\\sbonda\\AppData\\Local\\Microsoft\\Edge\\User Data"
+			],
+			"type": "stdio"
+		}
+	}
 }
