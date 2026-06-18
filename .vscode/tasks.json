@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "noop",
+			"type": "shell",
+			"command": "echo",
+			"args": [
+				"noop"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "noop2",
+			"type": "shell",
+			"command": "echo",
+			"args": [
+				"preparing patch"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "noop3",
+			"type": "shell",
+			"command": "echo",
+			"args": [
+				"applying file updates"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "noop4",
+			"type": "shell",
+			"command": "echo",
+			"args": [
+				"switching to patch tool now"
+			],
+			"isBackground": false
+		}
+	]
+}
